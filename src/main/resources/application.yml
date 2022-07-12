@@ -1,0 +1,10 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  devtools:
+    livereload:
+      enabled: true
+handlebars:
+  suffix: .hbs
+  cache: false
