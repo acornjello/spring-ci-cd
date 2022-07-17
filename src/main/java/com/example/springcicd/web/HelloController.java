@@ -1,8 +1,8 @@
 package com.example.springcicd.web;
 
-import com.example.springcicd.dto.HelloResponseDto;
+import com.example.springcicd.web.dto.HelloResponseDto;
 import com.example.springcicd.domain.posts.PostsRepository;
-import com.example.springcicd.dto.PostsSaveRequestDto;
+import com.example.springcicd.web.dto.PostsSaveRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +14,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
+
         return "hello";
     }
 

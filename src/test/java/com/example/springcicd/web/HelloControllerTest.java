@@ -1,6 +1,6 @@
 package com.example.springcicd.web;
 
-import com.example.springcicd.dto.HelloResponseDto;
+import com.example.springcicd.web.dto.HelloResponseDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

@@ -1,4 +1,4 @@
-package com.example.springcicd.dto;
+package com.example.springcicd.web.dto;
 
 import org.junit.jupiter.api.Test;
 
