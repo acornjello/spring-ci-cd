@@ -1,10 +1,13 @@
-package com.example.springcicd.repository;
+package com.example.springcicd.domain;
 
-import com.example.springcicd.entity.Posts;
+import com.example.springcicd.domain.posts.Posts;
+import com.example.springcicd.domain.posts.PostsRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -25,10 +28,14 @@ public class PostsRepositoryTest {
     @Test
     public void  게시글저저장_불러오기() {
         // given
+        String title = "테스트 제목";
+        String content = "테스트 본문";
+        String author = "test@gmail.com";
+
         postsRepository.save(Posts.builder()
-                .title("테스트 게시글")
-                .content("테스트 본문")
-                .author("acornjello14@gmail.com")
+                .title(title)
+                .content(content)
+                .author(author)
                 .build());
 
         // when
@@ -36,9 +43,9 @@ public class PostsRepositoryTest {
 
         // then
         Posts posts = postsList.get(0);
-        assertThat(posts.getTitle()).isEqualTo("테스트 게시글");
-        assertThat(posts.getContent()).isEqualTo("테스트 본문");
-        assertThat(posts.getAuthor()).isEqualTo("acornjello14@gmail.com");
+        assertThat(posts.getTitle()).isEqualTo(title);
+        assertThat(posts.getContent()).isEqualTo(content);
+        assertThat(posts.getAuthor()).isEqualTo(author);
     }
 
     @Test

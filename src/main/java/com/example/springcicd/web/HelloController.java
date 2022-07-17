@@ -1,7 +1,7 @@
 package com.example.springcicd.web;
 
 import com.example.springcicd.dto.HelloResponseDto;
-import com.example.springcicd.repository.PostsRepository;
+import com.example.springcicd.domain.posts.PostsRepository;
 import com.example.springcicd.dto.PostsSaveRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
