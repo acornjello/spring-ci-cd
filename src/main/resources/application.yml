@@ -5,6 +5,4 @@ spring:
   devtools:
     livereload:
       enabled: true
-handlebars:
-  suffix: .hbs
-  cache: false
+

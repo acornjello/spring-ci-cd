@@ -1,4 +1,4 @@
-package com.example.springcicd;
+package com.example.springcicd.web;
 
 import com.example.springcicd.repository.PostsRepository;
 import com.example.springcicd.dto.PostsSaveRequestDto;
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-public class WebRestController {
+public class HelloController {
 
     private PostsRepository postsRepository;
 
     @GetMapping("/hello")
     public String hello() {
-        return "HelloWorld";
+        return "hello";
     }
 
     @PostMapping("/posts")
